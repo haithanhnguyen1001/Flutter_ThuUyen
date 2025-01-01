@@ -85,7 +85,7 @@ class _AddToCartState extends State<AddToCart> {
             ),
             GestureDetector(
               onTap: () {
-                provider.toggleFavorite(widget.product);
+                provider.addProductToCart(widget.product, currentIndex);
                 const snackBar = SnackBar(
                   content: Text(
                     "Successfully added!",
