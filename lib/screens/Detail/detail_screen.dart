@@ -15,6 +15,8 @@ class DetailScreen extends StatefulWidget {
   State<DetailScreen> createState() => _DetailScreenState();
 }
 
+//bottom navigation bar
+//app bar
 class _DetailScreenState extends State<DetailScreen> {
   int currentImage = 0;
   int currentColor = 1;

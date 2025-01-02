@@ -7,11 +7,10 @@ class CartProvider extends ChangeNotifier {
   List<Product> get cart => _cart;
 
   void addProductToCart(Product product, int quantity) {
-    product.quantity = quantity;
     if (_cart.contains(product)) {
       for (Product element in _cart) {
         if (element.title == product.title) {
-          element.quantity = element.quantity + product.quantity;
+          element.quantity = element.quantity + quantity;
         }
       }
     } else {

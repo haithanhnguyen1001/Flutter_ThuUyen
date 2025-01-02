@@ -58,8 +58,8 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: 130,
                 child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: categories.length,
+                  scrollDirection: Axis.horizontal, //truot ngang
+                  itemCount: categories.length, //6
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {
@@ -120,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.w500,
                         fontSize: 16,
                         color: Colors.black54),
-                  )
+                  ),
                 ],
               ),
               //for shopping items
@@ -136,7 +136,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: selectdCategories[selectedIndex].length,
                 itemBuilder: (context, index) {
                   return ProductCard(
-                      product: selectdCategories[selectedIndex][index]);
+                    product: selectdCategories[selectedIndex][index],
+                  );
                 },
               ),
             ],
